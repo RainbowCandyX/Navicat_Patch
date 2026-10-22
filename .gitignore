@@ -1,0 +1,46 @@
+# Visual Studio 本地配置与缓存
+.vs/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+ipch/
+
+# 编译和中间输出目录
+[Dd]ebug/
+[Rr]elease/
+x64/
+x86/
+Win32/
+ARM/
+ARM64/
+[Bb]uild/
+[Bb]in/
+[Oo]bj/
+[Oo]ut/
+artifacts/
+cmake-build-*/
+
+# 编译产物与构建记录
+*.dll
+*.exe
+*.lib
+*.exp
+*.obj
+*.o
+*.pch
+*.pdb
+*.ilk
+*.ipdb
+*.iobj
+*.idb
+*.tlog
+*.log
+*.lastbuildstate
+
+# 本地私密配置
+.env
+.env.*
+*.pfx
+*.p12
+*.key
