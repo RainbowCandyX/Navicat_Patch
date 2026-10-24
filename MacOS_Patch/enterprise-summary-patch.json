@@ -1,0 +1,52 @@
+{
+  "schema_version": 1,
+  "name": "Navicat Premium 18.0.3 build 317 arm64 企业类别与注册摘要一致性补丁",
+  "scope": "保留上一版启动校验与企业类别补丁，使注册摘要的 versionType 字段在默认、永久许可、订阅三个分支均为 1；不修改许可证、注册方式、注册姓名或持久化记录。",
+  "target": "Contents/Frameworks/libcc.dylib",
+  "size": 92668928,
+  "original_sha256": "5b95649c5ee671a4d322cebd7822f000f5c76929648d2b29dbd284a70795ff9c",
+  "patched_sha256": "fd8ff2808a116becea0f5ee1db87326f457473e5a388ba2d54505bae2720d37c",
+  "patches": [
+    {
+      "offset": 49205764,
+      "virtual_address": "0x02eed204",
+      "before": "f44fbea9fd7b01a9",
+      "after": "20008052c0035fd6",
+      "description": "沿用上一版本地启动校验返回成功的修改"
+    },
+    {
+      "offset": 49246440,
+      "virtual_address": "0x02ef70e8",
+      "before": "1f5100f81f0100f9",
+      "after": "290080521f2500a9",
+      "description": "初始化注册摘要时保持前两个状态字段为零，将 versionType 初始化为 1，同时清零相邻填充字节；试用区间标志仍由原代码计算"
+    },
+    {
+      "offset": 49246580,
+      "virtual_address": "0x02ef7174",
+      "before": "e89f40b9",
+      "after": "28008052",
+      "description": "永久许可摘要分支将 versionType 写为 1，保留其他状态和字符串处理"
+    },
+    {
+      "offset": 49246780,
+      "virtual_address": "0x02ef723c",
+      "before": "e83b41b9",
+      "after": "28008052",
+      "description": "订阅摘要分支将 versionType 写为 1，保留其他状态和字符串处理"
+    },
+    {
+      "offset": 49247448,
+      "virtual_address": "0x02ef74d8",
+      "before": "ffc305d1f65714a9",
+      "after": "20008052c0035fd6",
+      "description": "沿用上一版企业类别 getter 返回 1 的修改"
+    }
+  ],
+  "limitations": [
+    "仅修正本地功能判定与摘要版本类别的一致性，不生成有效许可证，不修改账户授权",
+    "关于窗口通过 versionType 选择版本标签；这不等于所有注册窗口或校验入口均显示已注册",
+    "仅生成离线库，不覆盖安装目录，不重新签名，不启动真实应用",
+    "原始文件必须使用清单匹配的原厂备份，重新签名后的安装库不再匹配原始哈希"
+  ]
+}

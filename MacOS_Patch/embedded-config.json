@@ -1,0 +1,13 @@
+{
+  "schema_version": 1,
+  "bundle_id": "com.navicat.NavicatPremium",
+  "version": "18.0.3",
+  "build": "317",
+  "architecture": "arm64",
+  "minimum_macos": "11.0",
+  "main_sha256": "50374b07500d7b5ecbac14ef85da6f106ad6799afaf0107cc5eae2977e1afc9e",
+  "patch_manifest": "enterprise-summary-patch.json",
+  "access_group": "VH7G2MRF27.com.prect.Navicat.conn_common_access_group",
+  "keychain_marker": "com.navicat.NavicatPremium.NavicatPatch.local.v1",
+  "injected_library": "NavicatKeychainBridge.dylib"
+}

@@ -44,3 +44,10 @@ cmake-build-*/
 *.pfx
 *.p12
 *.key
+
+# macOS 本地工件、应用副本和 Python 缓存
+MacOS_Patch/output/
+MacOS_Patch/**/__pycache__/
+MacOS_Patch/**/*.py[cod]
+MacOS_Patch/**/*.dylib
+MacOS_Patch/**/*.app/
